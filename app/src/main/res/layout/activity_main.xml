@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f7f7f7">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/eng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="English" />
+
+                        <TextView
+                            android:id="@+id/eng_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="eng_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/one_kaz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="Қазақ" />
+
+                        <TextView
+                            android:id="@+id/kaz_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="kaz_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/one_rus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="русский" />
+
+                        <TextView
+                            android:id="@+id/rus_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="rus_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="0.1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/tab1_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="next"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab1_review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="review"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab1_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Help"
+                            android:textColor="#51a0e5" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--tab2 start-->
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/tab2_1button1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="English"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab2_1button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Қазақ"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab2_1button3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="русский"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab2_1button4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Random"
+                            android:textColor="#51a0e5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab2_eng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="English" />
+
+                        <EditText
+                            android:id="@+id/tab2_eng_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:hint="eng_ex"
+                            android:textAlignment="center" />
+
+
+                        <TextView
+                            android:id="@+id/tab2_eng_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="eng_ex"
+                            android:textAlignment="center"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab2_kaz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="Қазақ" />
+
+                        <EditText
+                            android:id="@+id/tab2_kaz_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:hint="kaz_ex"
+                            android:textAlignment="center"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tab2_kaz_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="kaz_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tab2_rus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="русский" />
+
+                        <EditText
+                            android:id="@+id/tab2_rus_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:hint="rus_ex"
+                            android:textAlignment="center"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tab2_rus_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="rus_ex"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/tab2_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="next"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab2_review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="review"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab2_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Help"
+                            android:textColor="#51a0e5" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!--Tab3 Start-->
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/tab3_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Daily"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab3_quiz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Quiz"
+                            android:textColor="#51a0e5" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab3_eng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="English" />
+
+                        <TextView
+                            android:id="@+id/tab3_eng_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="eng_ex"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab3_kaz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="Қазақ" />
+
+                        <TextView
+                            android:id="@+id/tab3_kaz_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="kaz_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab3_rus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/white"
+                            android:text="русский" />
+
+                        <TextView
+                            android:id="@+id/tab3_rus_ex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@android:color/white"
+                            android:shadowColor="#dcdcdc"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="rus_ex"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/tab3_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="next"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab3_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Submit"
+                            android:textColor="#51a0e5" />
+
+                        <Button
+                            android:id="@+id/tab3_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:text="Help"
+                            android:textColor="#51a0e5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>
