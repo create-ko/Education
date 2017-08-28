@@ -354,17 +354,29 @@ public class MainActivity extends AppCompatActivity {
                     if(today_up >= today_list.size()){
                         today_up=0;
                     }
-                    tx3_eng.setText(list.get(today_list.get(today_up)).getEng());
-                    tx3_rus.setText(list.get(today_list.get(today_up)).getRus());
-                    tx3_kaz.setText(list.get(today_list.get(today_up)).getKaz());
+                    if(today_list.isEmpty()){
+                        tx3_eng.setText("");
+                        tx3_rus.setText("");
+                        tx3_kaz.setText("");
+                    }else {
+                        tx3_eng.setText(list.get(today_list.get(today_up)).getEng());
+                        tx3_rus.setText(list.get(today_list.get(today_up)).getRus());
+                        tx3_kaz.setText(list.get(today_list.get(today_up)).getKaz());
+                    }
                 }else {
                     quiz_up++;
                     if(quiz_up >= quiz_list.size()){
                         quiz_up=0;
                     }
-                    tx3_eng.setText(list.get(quiz_list.get(quiz_up)).getEng());
-                    tx3_rus.setText(list.get(quiz_list.get(quiz_up)).getRus());
-                    tx3_kaz.setText(list.get(quiz_list.get(quiz_up)).getKaz());
+                    if(quiz_list.isEmpty()){
+                        tx3_eng.setText("");
+                        tx3_rus.setText("");
+                        tx3_kaz.setText("");
+                    }else {
+                        tx3_eng.setText(list.get(quiz_list.get(quiz_up)).getEng());
+                        tx3_rus.setText(list.get(quiz_list.get(quiz_up)).getRus());
+                        tx3_kaz.setText(list.get(quiz_list.get(quiz_up)).getKaz());
+                    }
                 }
             }
         });
@@ -373,9 +385,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(checkUserbutton==1){
-                    dbHelper.setToday_submit(db, today_up);
+                    dbHelper.setToday_submit(db, today_list.get(today_up));
+                    today_list = dbHelper.getToday_review(db);
                 }else{
-                    dbHelper.setQuiz_submit(db, quiz_up);
+                    dbHelper.setQuiz_submit(db, quiz_list.get(quiz_up));
+                    quiz_list = dbHelper.getQuiz_review(db);
                 }
             }
         });
