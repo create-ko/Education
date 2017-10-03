@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button bt1_next, bt2_next, bt3_next, bt1_review, bt2_review, bt3_review;
 
+    LinearLayout li1, li2, li3;
 
 
     Button bt_eng, bt_kaz, bt_rus, bt_ran;
@@ -134,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
         tx3_eng = (TextView) findViewById(R.id.tab3_eng_ex);
         tx3_rus = (TextView) findViewById(R.id.tab3_rus_ex);
         tx3_kaz = (TextView) findViewById(R.id.tab3_kaz_ex);
+
+        li1 = (LinearLayout) findViewById(R.id.Studied1);
+        li2 = (LinearLayout) findViewById(R.id.Studied2);
+        li3 = (LinearLayout) findViewById(R.id.Studied3);
 
 
         //TabHost Java Code
@@ -322,27 +328,41 @@ public class MainActivity extends AppCompatActivity {
         bt3_daily.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                today_list = dbHelper.getToday_review(db);
-                    if(!today_list.isEmpty()){
 
-                }
-                tx3_eng.setText(list.get(today_list.get(today_up)).getEng());
-                tx3_rus.setText(list.get(today_list.get(today_up)).getKaz());
-                tx3_kaz.setText(list.get(today_list.get(today_up)).getRus());
-                checkUserbutton=1;
+                li1.setVisibility(View.GONE);
+                li2.setVisibility(View.GONE);
+                li3.setVisibility(View.GONE);
+
+//                today_list = dbHelper.getToday_review(db);
+//                    if(!today_list.isEmpty()){
+//
+//                }
+//                tx3_eng.setText(list.get(today_list.get(today_up)).getEng());
+//                tx3_rus.setText(list.get(today_list.get(today_up)).getKaz());
+//                tx3_kaz.setText(list.get(today_list.get(today_up)).getRus());
+//                checkUserbutton=1;
+
+
             }
         });
 
         bt3_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                quiz_list = dbHelper.getQuiz_review(db);
-                if(!quiz_list.isEmpty()){
-                }
-                tx3_eng.setText(list.get(quiz_list.get(quiz_up)).getEng());
-                tx3_rus.setText(list.get(quiz_list.get(quiz_up)).getRus());
-                tx3_kaz.setText(list.get(quiz_list.get(quiz_up)).getKaz());
-                checkUserbutton=2;
+
+                li1.setVisibility(View.VISIBLE);
+                li2.setVisibility(View.VISIBLE);
+                li3.setVisibility(View.VISIBLE);
+
+
+
+//                quiz_list = dbHelper.getQuiz_review(db);
+//                if(!quiz_list.isEmpty()){
+//                }
+//                tx3_eng.setText(list.get(quiz_list.get(quiz_up)).getEng());
+//                tx3_rus.setText(list.get(quiz_list.get(quiz_up)).getRus());
+//                tx3_kaz.setText(list.get(quiz_list.get(quiz_up)).getKaz());
+//                checkUserbutton=2;
             }
         });
 
