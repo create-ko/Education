@@ -99,39 +99,20 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="#33ccff"
-                android:text="login"
+                android:text="Start"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/registerButton"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn02"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="register"
-                android:textAlignment="center"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="0.00"
-                android:text="Institute"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.00"
-                android:text="for Multilingual Education"
-                android:textAlignment="center"
+                android:background="#33ccff"
+                android:text="Custom"
+                android:textColor="#ffffff"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
